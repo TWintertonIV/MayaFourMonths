@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        
+        body {
+            background: linear-gradient(-45deg, #ff2600, #e73c7e, #f322fe, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+        }
+            
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+            
+
+        .message-box{
+
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:space-between;
+
+            height:95%;
+            width:30%;
+            position:absolute;
+            border: 3px solid rgb(82, 7, 7);
+            background-color: rgb(65, 48, 48);
+
+
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+        }
+        
+        .button {
+        border: 2px solid rgb(249, 122, 143);
+        color: white;
+        padding: 20px 64px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        }
+
+        .center{
+            margin: 0;
+            position: absolute;
+            top: 8%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .messages{
+            margin: 0;
+            position: absolute;
+
+            height:0%;
+            width:100%;
+
+
+            top: 15%;
+            left: 55%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+            font-family: Arial;
+            font-size: 13px;
+            animation: fadeIn 3s;
+            -webkit-animation: fadeIn 3s;
+            -moz-animation: fadeIn 3s;
+            -o-animation: fadeIn 3s;
+            -ms-animation: fadeIn 3s;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+          }
+          
+          @-moz-keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+          }
+          
+          @-webkit-keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+          }
+          
+          @-o-keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+          }
+          
+          @-ms-keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+          }
+
+        .texts{
+            margin: 0;
+            position: relative;
+        }
+
+        .button1 {background-color: #dc1f06;} /* Green */
+        .button1:hover {
+            background-color: #8b0202;
+          }
+        </style>
+    </head>
+    <body>
+
+
+        <script src="generateText.js"></script>
+        <div class="message-box">
+            <div class="center">
+                <button class="button button1" onclick="addElement()">I Love You</button>
+            </div>
+
+            <div class = "messages" id="messages">
+                <div class = "texts">
+                </div>
+            </div>
+            
+
+        </div>
+    </body>
+</html>
